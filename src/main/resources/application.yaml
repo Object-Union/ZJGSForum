@@ -1,0 +1,60 @@
+spring:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+  data:
+    mongodb:
+      host: 81.69.99.102
+      port: 27017
+      database: zjgsforum
+      password: Sanbao2003
+      username: root
+      authentication-database: admin
+
+  redis:
+    host: 81.69.99.102
+    port: 6379
+    database: 0
+    timeout: 3000
+    password: Sanbao2003
+    lettuce: # Redis的Java驱动包,使用lettuce连接池
+      pool:
+        max-active: 200 # 连接池最大连接数（使用负值表示没有限制）
+        max-wait: -1    # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-idle: 10    # 连接池中的最大空闲连接 (默认为8)
+        min-idle: 1     # 连接池中的最小空闲连接
+
+  datasource:
+    url: jdbc:mysql://81.69.99.102:3306?useSSL=false
+    username: root
+    password: Sanbao2003
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  jdbc:
+    template:
+      query-timeout: 15
+
+#pagehelper:
+#  helper-dialect: mysql
+#  reasonable: true
+#  support-methods-arguments: true
+
+logging:
+  level:
+    com:
+      example:
+        zjgsforum: debug
+
+mybatis-plus:
+  mapper-locations: classpath:mappers/*.xml
+  configuration:
+    cache-enabled: true
+    aggressive-lazy-loading: false
+    lazy-loading-enabled: true
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.log4j2.Log4j2Impl
+server:
+  port: 8081
