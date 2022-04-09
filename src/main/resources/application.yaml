@@ -6,19 +6,19 @@ spring:
 
   data:
     mongodb:
-      host: 81.69.99.102
-      port: 27017
-      database: zjgsforum
-      password: Sanbao2003
+      host: xxx
+      port: xxx
+      database: xxx
+      password: xxx
       username: root
       authentication-database: admin
 
   redis:
-    host: 81.69.99.102
-    port: 6379
+    host: xxx
+    port: xxx
     database: 0
-    timeout: 3000
-    password: Sanbao2003
+    timeout: xxx
+    password: xxx
     lettuce: # Redis的Java驱动包,使用lettuce连接池
       pool:
         max-active: 200 # 连接池最大连接数（使用负值表示没有限制）
@@ -27,9 +27,9 @@ spring:
         min-idle: 1     # 连接池中的最小空闲连接
 
   datasource:
-    url: jdbc:mysql://81.69.99.102:3306?useSSL=false
-    username: root
-    password: Sanbao2003
+    url: xxx
+    username: xxx
+    password: xxx
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
 
