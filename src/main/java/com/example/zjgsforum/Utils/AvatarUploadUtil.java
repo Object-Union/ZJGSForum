@@ -21,7 +21,7 @@ public class AvatarUploadUtil {
                 throw new UploadException("上传文件失败");
             }
 
-            return "http://81.69.99.102/avatar/" + fileName;
+            return "http://xxx/avatar/" + fileName;
         }
     }
 }
