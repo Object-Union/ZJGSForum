@@ -10,7 +10,7 @@ spring:
       port: xxx
       database: xxx
       password: xxx
-      username: root
+      username: xxx
       authentication-database: admin
 
   redis:
